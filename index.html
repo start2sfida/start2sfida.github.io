@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gabriele Alampi </title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script  href="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script  href="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta charse﻿t="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum﻿-scale=1.0, maximum-scale=1.0">
+    <script src="https://cdnjs.﻿cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>﻿﻿<!-- link invalido-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>﻿﻿
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
+    <link rel="stylesheet" type="text/css" href="pater/pater.css" />
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+  </head>
+
+  </head>
+  <body>
+
+  <!-- <video id="myVideo" loop autoplay muted>
+     <source src="loop.mp4" type="video/mp4">
+<img src="back.jpg"class="glitch-img" alt="">
+</video>-->
+
+
+
+<main>
+
+  <div class="content">
+    <canvas class="scene scene--full" id="scene"></canvas>
+    <script type="x-shader/x-vertex" id="wrapVertexShader">
+      attribute float size;
+      attribute vec3 color;
+      varying vec3 vColor;
+      void main() {
+        vColor = color;
+        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+        gl_PointSize = size * ( 350.0 / - mvPosition.z );
+        gl_Position = projectionMatrix * mvPosition;
+      }
+    </script>
+    <script type="x-shader/x-fragment" id="wrapFragmentShader">
+      varying vec3 vColor;
+      uniform sampler2D texture;
+      void main(){
+        vec4 textureColor = texture2D( texture, gl_PointCoord );
+        if ( textureColor.a < 0.3 ) discard;
+        vec4 color = vec4(vColor.xyz, 1.0) * textureColor;
+        gl_FragColor = color;
+      }
+    </script>
+
+  </div>
+</main>
+
+
+    <div class="overlay">
+  <h1>    GABRIELE ALAMPI</h1>
+    </div>
+    <div class="wrapper">
+      <div class="logo">
+      <p>Gabriele Alampi</p>
+      </div>
+      <div class="nav">
+        <ul>
+          <li onclick="window.open('index.html')">Home</li>
+         <li onclick="window.open('about.html')">About</li>
+          <li onclick="window.open('works/portfolio.html')">Portfolio</li>
+          <li onclick="window.open('contact/contact.html')">Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="social-media">
+      <ul>
+        <li><a href="https://github.com/Gabbriele"><i class="fa fa-github"aria-hidden="true"></i></a></li>
+        <li><a href="https://linkdedin.com/"><i class="fa fa-linkedin"aria-hidden="true"></i></a></li>
+        <li><a href="cv.doc"><i class="fas fa-bolt"aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="side-strip">
+      <span>ADVENTURE  FILL SOULS</span>
+    </div>
+    <div class="header">
+      <h1>Gabriele Alampi</h1>
+      <p>Creative full stack developer </p>
+      <button onclick="window.open('contact/contact.html')">Improve together</button>
+    </div>
+    <div class="bottom-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h6>Cybersecurity.</h6>
+<p>Passionate about <br>ethical hacking,I can't stop <br>perform penetration tests</p>
+          </div>
+          <div class="col-lg-4">
+            <h6>Web design.</h6>
+<p>I love to create <br> unique designs using <br>UX & UI principles</p>
+     </div>
+          <div class="col-lg-4">
+            <h6>Artificial intelligence.</h6>
+<p>Fascinated by machine learning,<br> my next big challenge</p>
+     </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      TweenMax.to(".overlay h1",2,{
+        opacity: 0,
+        y:-60,
+        ease:Expo.easeInOut
+      })
+      TweenMax.to(".overlay ",2,{
+        delay:2.0,
+        top:"-100%",
+        ease:Expo.easeInOut
+      })
+      TweenMax.to(".logo ",1,{
+        delay:2.4,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      },0.2)
+      TweenMax.staggerFrom(".nav ul li",1,{
+        delay:2.4,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      },0.2)
+      TweenMax.staggerFrom(".social-media ul li",1,{
+        delay:2.4,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      },0.2)
+      TweenMax.from(".side-strip",2,{
+        delay:2.4,
+        opacity:0,
+        y:40,
+        ease:Expo.easeInOut
+      })
+      TweenMax.from(".row h6",2,{
+        delay:3,
+        opacity:0,
+        y:40,
+        ease:Expo.easeInOut
+      })
+      TweenMax.from(".row p",2,{
+        delay:3.2,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      })
+      TweenMax.from(".header p",2,{
+        delay:3.4,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      })
+      TweenMax.from(".header h1",2,{
+        delay:3.2,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      })
+      TweenMax.from(".header button",2,{
+        delay:3.6,
+        opacity:0,
+        y:20,
+        ease:Expo.easeInOut
+      })
+
+
+    </script>
+    <script src="js/demo.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo1.js"></script>
+  </body>
+</html>

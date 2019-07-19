@@ -1,0 +1,121 @@
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Poppins !important;
+background-color: #17182f;
+background-color: #303952;
+}
+
+#myVideo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  line-height: 40px;
+  float: left;
+  margin: 1.2em 0 0 2.2em;
+  font-weight: bolder;
+  color: white;
+}
+.nav{
+  line-height: 40px !important;
+  margin: 1.2rem !important;
+  position: absolute !important;
+  right: 0 !important;
+}
+.nav ul li {
+  list-style: none     !important;
+  display: inline-block    !important;
+  color: white   !important;
+  padding-right: 36px  !important;
+  cursor: pointer !important;
+}
+
+.social-media{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.social-media ul li {
+  list-style: none;
+  color: white;
+  padding-top: 20px;
+}
+.side-strip{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -4em;
+  transform: rotate(90deg);
+  color: white;
+  letter-spacing: 4px;
+}
+.header{
+  position: absolute;
+  top: 38%;
+  left: 46%;
+  transform: translate(-50%,-50%);
+}
+.header h1{
+  color: white;
+  font-weight: bolder;
+}
+.header p{
+  color: white;
+  font-weight: lighter;;
+}
+.header button{
+  margin-top: 12px;
+  border: none;
+  padding: 16px 40px;
+  background: white;
+  font-weight: 600;
+  color: #444;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.bottom-bar{
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.row{
+  padding:2.6em 2.6em 2em 2.6em;
+  background: #000;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.bottom-bar h6{
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.bottom-bar p{
+  font-weight: lighter;
+  font-size: 14px;
+}
+.overlay h1{
+  z-index: 1;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 12px;
+}
+.overlay{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: 0;
+}
